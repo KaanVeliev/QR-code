@@ -1,0 +1,96 @@
+/* General Styles */
+body {
+    background: url('high-resolution-wood-background-sk0k1ko8b0lxyyf4.jpg') no-repeat center top fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Dark overlay to enhance light visibility */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: -1;
+}
+
+/* 📷 Gallery container */
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 30px;
+}
+
+/* 📷 Gallery images */
+.gallery img {
+    width: 30%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* 📌 Footer styles */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    width: 100%;
+}
+
+/* 🖼️ Footer item: Image + Text */
+.footer-item {
+    display: flex;
+    align-items: center; /* Align text with image */
+    margin-bottom: 10px; /* Space between rows */
+}
+
+/* 🖼️ Footer images */
+.footer-item img {
+    width: 80px; /* Adjust image size */
+    height: auto;
+    margin-right: 15px; /* Space between image and text */
+}
+
+/* 📝 Footer text */
+.footer-item p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+/* 📱 Mobile-friendly styles */
+@media screen and (max-width: 768px) {
+    .gallery {
+        flex-direction: column; /* Stack images vertically */
+        align-items: center;
+    }
+
+    .gallery img {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    footer {
+        padding: 10px;
+    }
+
+    .footer-images img {
+        width: 60px; /* Slightly smaller on mobile */
+    }
+}
